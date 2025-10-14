@@ -1,0 +1,430 @@
+/* ==========================================================
+   GLOBAL STYLES — PET GUARDIAN LIMITED
+   Modern glassy blue theme with floating nav and background
+   ========================================================== */
+
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('images/banner.png') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  margin: 0;
+  padding-top: 90px; /* space for floating nav */
+  line-height: 1.7;
+}
+
+
+/* ===== GLASS RIBBON NAVBAR ===== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Logo & Brand Name ===== */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.logo-area h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ===== Desktop Nav Links ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #334155;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 1px;
+  transition: width 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.6);
+}
+
+.nav-links a.active {
+  color: #1d4ed8;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  background: #1d4ed8;
+  box-shadow: 0 0 6px rgba(29, 78, 216, 0.6);
+}
+
+/* Prevent focus/visited turning blue always */
+.nav-links a:focus,
+.nav-links a:visited {
+  color: #334155;
+}
+
+.nav-links a.active:visited {
+  color: #1d4ed8;
+}
+
+/* ===== Scroll Effect ===== */
+.top-nav.scrolled {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== MOBILE VIEW (Below 700px) ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1d4ed8;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Drawer Menu Hidden by Default */
+@media (max-width: 700px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ===== Hamburger Animation (toggle state) ===== */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+
+
+/* ==========================================================
+   PAGE SECTIONS (Glassy Containers)
+   ========================================================== */
+.page-section {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 60px 20px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 40px auto;
+  color: #333;
+}
+
+.page-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+}
+
+.page-section h3 {
+  color: #2563eb;
+  margin-top: 2rem;
+}
+
+/* ==========================================================
+   HOME PAGE CONTENT
+   ========================================================== */
+.home-article {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 40px auto;
+  color: #333;
+}
+
+.home-article h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1d4ed8;
+}
+
+.home-article h3 {
+  margin-top: 2rem;
+  color: #2563eb;
+}
+
+.home-article ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.home-article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Key points grid */
+.key-points {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+
+.key-points .point {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================
+   BUTTONS & CTA
+   ========================================================== */
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+.btn.secondary {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn.secondary:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ==========================================================
+   CONTACT PAGE
+   ========================================================== */
+.contact-page .intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
+}
+
+.contact-info {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form-area {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.map-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.map-section h3 {
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+/* ==========================================================
+   SERVICES PAGE
+   ========================================================== */
+.services-page .intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #444;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 60px;
+}

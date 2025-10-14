@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — Pet Guardian Limited</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="nav-container">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Pet Guardian Logo" />
+      <h1>Pet Guardian Limited</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="page-section services-page">
+  <section class="intro">
+    <h2>Our Services</h2>
+    <p>
+      At <strong>Pet Guardian Limited</strong>, we offer a complete range of pet safety and care solutions designed to protect your furry companions and bring you peace of mind.  
+      From smart GPS tracking to personalized training advice, our mission is to make pet care simpler, smarter, and safer for every household.
+    </p>
+  </section>
+
+  <section class="service-grid">
+    <div class="feature">
+      <h3>🐾 Real-Time & Normal GPS Tracking</h3>
+      <p>
+        Stay connected to your pet at all times. Our <strong>PawSentry</strong> device provides real-time location updates every few seconds, and normal tracking every 1–2 minutes to conserve battery. 
+        See your pet’s position live on the app and even track multiple pets at once — each with unique colors and icons.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🗺️ Geofencing Zones</h3>
+      <p>
+        Define <strong>safe zones</strong> (like your home) and <strong>danger zones</strong> (such as roads or restricted areas) through our app.  
+        You’ll receive instant alerts whenever your pet leaves or enters these zones — ensuring you’re always one step ahead.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>📶 WiFi Battery Saving</h3>
+      <p>
+        PawSentry intelligently switches to WiFi mode when your pet is home, reducing GPS usage and extending battery life.  
+        It automatically returns to GPS mode once your pet leaves the WiFi range — no manual effort needed.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>📍 Location History</h3>
+      <p>
+        Curious where your pet has been today? View up to <strong>90 days</strong> of detailed route history, including playtime spots and walking paths.  
+        Use date filters or a timeline slider to review your pet’s past adventures with ease.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🔔 Notifications & Alerts</h3>
+      <p>
+        Receive instant notifications for every important event — from geofence alerts to battery status.  
+        You’ll even get a <strong>weekly activity dashboard</strong> every Sunday, summarizing your pet’s movements and activity trends.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>💡 Light & Sound Locator</h3>
+      <p>
+        Can’t find your pet in the dark or a crowded space? Activate your PawSentry’s <strong>LED light and sound feature</strong> right from the app.  
+        The function automatically stops after 2 minutes or can be manually turned off anytime.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🎤 Talkie Walkie Function</h3>
+      <p>
+        Communicate directly with your pet! Record short voice clips (up to 5 seconds) and send them to the tracker.  
+        You can also receive short audio recordings from your pet’s surroundings — a fun and reassuring way to stay close even from afar.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🔗 Share Live Tracking</h3>
+      <p>
+        Share your pet’s live location with friends or family. Each shared link allows others to track your pet safely in real time.  
+        Basic accounts allow two users, while premium accounts support up to five users.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>❤️ Pet Safety Accessories</h3>
+      <p>
+        We also provide high-quality collars, reflective leashes, and ID tags — all designed for durability and safety.  
+        Each product is crafted with comfort and visibility in mind to keep your pet safe during day and night.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🚑 Emergency & Veterinary Support</h3>
+      <p>
+        Pet Guardian partners with trusted veterinary clinics and responders in Chattogram to provide quick support when emergencies strike.  
+        Our team can help guide you to the nearest vet or connect you with professional help instantly.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🎓 Training & Owner Guidance</h3>
+      <p>
+        We believe safety starts with awareness. That’s why we offer pet training tips, behavioral advice, and personalized guidance for owners — ensuring every pet grows in a safe and loving environment.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>Ready to Protect Your Pet?</h3>
+    <p>
+      Join hundreds of pet owners across Bangladesh who trust <strong>Pet Guardian Limited</strong> for safety, innovation, and care.  
+      Explore our products and discover how PawSentry can transform your pet’s everyday life.
+    </p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn">Get in Touch</a>
+      <a href="about.html" class="btn secondary">Learn More About Us</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.
+</footer>
+
+<script>
+  // Navbar scroll shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.top-nav');
+    if (window.scrollY > 10) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Highlight current nav link automatically
+  const currentPage = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  // Mobile drawer
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        }
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

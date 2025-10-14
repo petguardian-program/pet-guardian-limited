@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pet Guardian Limited — Where Every Tail Feels Safe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="nav-container">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Pet Guardian Logo" />
+      <h1>Pet Guardian Limited</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="home-article">
+  <div class="container">
+    <h2>Welcome to Pet Guardian Limited</h2>
+    <p>
+      At <strong>Pet Guardian Limited</strong>, we believe every pet deserves to live freely, happily, and safely. 
+      As Bangladesh’s first tech-driven pet safety company, we combine love for animals with cutting-edge technology to give pet owners peace of mind — wherever they are. 
+      From real-time GPS tracking to smart alerts and geofencing, we make sure you’re always connected to your furry friend.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>
+      Our mission is simple — to create a world where <em>every tail feels safe</em>. 
+      We’re committed to delivering smart, reliable, and compassionate solutions that make pet care effortless and secure. 
+      Whether your pet is exploring the backyard or venturing out for a walk, Pet Guardian ensures you never lose sight of them.
+    </p>
+
+    <h3>Our Flagship Product — PawSentry</h3>
+    <p>
+      Meet <strong>PawSentry</strong> — a next-generation GPS pet tracker designed and developed by Pet Guardian. 
+      PawSentry does more than track location — it keeps your pet safe, connected, and loved through intelligent features like:
+    </p>
+    <ul>
+      <li><strong>Real-Time GPS Tracking</strong> — Track your pet’s live location anywhere, anytime.</li>
+      <li><strong>Geofencing</strong> — Set safe zones and get instant alerts if your pet leaves or enters one.</li>
+      <li><strong>WiFi Battery Saving</strong> — Smart power management when your pet is at home.</li>
+      <li><strong>Location History</strong> — View your pet’s daily routes and favorite spots.</li>
+      <li><strong>Light & Sound Locator</strong> — Find your pet easily in the dark or in crowded spaces.</li>
+      <li><strong>Talkie Walkie</strong> — Communicate directly with your pet through recorded messages.</li>
+    </ul>
+
+    <h3>Why Choose Pet Guardian?</h3>
+    <p>
+      We’re not just a tech company — we’re pet lovers first. 
+      Our team of developers, designers, and animal enthusiasts work passionately to build devices and apps that make pet care smarter and safer. 
+      Pet Guardian is trusted by hundreds of pet owners across Bangladesh for its reliability, innovation, and heart-centered approach.
+    </p>
+
+    <div class="key-points">
+      <div class="point">
+        <h4>🐾 Trusted & Local</h4>
+        <p>Proudly based in Chattogram, serving pet owners across Bangladesh with locally supported solutions.</p>
+      </div>
+      <div class="point">
+        <h4>🔒 Safety First</h4>
+        <p>Every feature of our devices and apps is designed with your pet’s well-being as the top priority.</p>
+      </div>
+      <div class="point">
+        <h4>💡 Smart Technology</h4>
+        <p>Our innovative tracking systems make it easy to monitor, communicate, and protect your pets 24/7.</p>
+      </div>
+    </div>
+
+    <h3>Join Our Pack</h3>
+    <p>
+      Being a pet parent is a journey filled with love, laughter, and care — and Pet Guardian is here to walk that journey with you. 
+      Explore our services, meet our team, and discover how technology can make pet safety simple and joyful.
+    </p>
+
+    <div class="cta-row">
+      <a href="services.html" class="btn">Explore Our Services</a>
+      <a href="contact.html" class="btn secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.
+</footer>
+
+<script>
+  // Add shadow when page scrolls
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.top-nav');
+    if (window.scrollY > 10) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Highlight current nav link automatically
+  const currentPage = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  // Mobile drawer toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        }
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
