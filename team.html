@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+    <title>Our Team — Pet Guardian Limited</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="images/logo.png" alt="Pet Guardian Logo" />
+                <h1>Pet Guardian Limited</h1>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="page-section team-page">
+        <section class="intro">
+            <h2>Meet the Team Behind Pet Guardian</h2>
+            <p>
+                At <strong>Pet Guardian Limited</strong>, our team is the heart of everything we do.
+                From developers to pet lovers, we’re united by one mission — ensuring every tail feels safe.
+            </p>
+        </section>
+
+        <section class="team-grid">
+            <div class="team-member">
+                <img src="images/team-shuvo.png" alt="Arfatul Mowla Shuvo">
+                <h3>Arfatul Mowla Shuvo</h3>
+                <p>Founder & CEO</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mowlashuvo" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/mowlashuvo" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/mowlashuvo" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="images/team-rakib.png" alt="Rakibul Islam">
+                <h3>Rakibul Islam</h3>
+                <p>Business Advisor</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rakibul--islam" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/rakibulislam6.2.1997" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        © <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.
+    </footer>
+
+    <script>
+        // Add shadow when page scrolls
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-nav');
+            if (window.scrollY > 10) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // Highlight current nav link automatically
+        const currentPage = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Mobile drawer toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            });
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 700) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('open');
+                    }
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>
