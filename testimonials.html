@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Testimonials — Pet Guardian Limited</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-nav">
+    <div class="nav-container">
+      <div class="logo-area"><img src="images/logo.png" alt="logo"><h1>Pet Guardian Limited</h1></div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="testimonials.html"class="active">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:28vh;padding:40px 20px">
+    <div class="inner container"><h1>Testimonials</h1><p>What pet parents say about us</p></div>
+  </section>
+
+  <main class="container">
+    <section class="page-section reveal">
+      <div class="grid grid-2">
+        <div class="testimonial reveal"><p>"The team found my missing dog the same day. Amazing."</p><cite>— Ramesh K.</cite></div>
+        <div class="testimonial reveal"><p>"Very friendly, responsive support and a reliable tracker."</p><cite>— Farzana S.</cite></div>
+        <div class="testimonial reveal"><p>"I love the geofence alerts — such peace of mind."</p><cite>— Sumon A.</cite></div>
+        <div class="testimonial reveal"><p>"Thoughtful product and local support — highly recommend."</p><cite>— Nabila R.</cite></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.</footer>
+
+  <script>
+  // nav & reveal script
+  window.addEventListener('scroll', ()=> document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8));
+  const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
+  hamburger?.addEventListener('click', ()=> {hamburger.classList.toggle('active');navLinks.classList.toggle('open');});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{ if(window.innerWidth<=880){hamburger.classList.remove('active');navLinks.classList.remove('open');}}));
+  const revealEls = document.querySelectorAll('.reveal'); const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }); },{threshold:0.12}); revealEls.forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>

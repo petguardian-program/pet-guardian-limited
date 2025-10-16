@@ -1,126 +1,67 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Pet Guardian Limited</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
   <header class="top-nav">
     <div class="nav-container">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="Pet Guardian Logo" />
-        <h1>Pet Guardian Limited</h1>
-      </div>
-
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+      <div class="logo-area"><img src="images/logo.png" alt="logo"><h1>Pet Guardian Limited</h1></div>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html"class="active">Contact</a>
       </nav>
     </div>
   </header>
 
+  <section class="hero" style="min-height:28vh;padding:40px 20px">
+    <div class="inner container"><h1>Contact Us</h1><p>We’re here to help — get in touch.</p></div>
+  </section>
 
-  <main class="page-section contact-page">
-    <section class="intro">
-      <h2>Contact Us</h2>
-      <p>
-        We’d love to hear from you — whether you have a question, want to partner, or need urgent help for your pet.
-        Our friendly support team is always ready to assist you. Let’s keep every tail safe, together!
-      </p>
-    </section>
-
-    <section class="contact-grid">
-      <div class="contact-info">
-        <h3>Get in Touch</h3>
-        <p><strong>Address:</strong> House - 11/13, Lane - 02, Road - 03, Block - B, North Halishahar, Chattogram Sadar,
-          Chattogram, Bangladesh</p>
-        <p><strong>Phone:</strong> (+880) 01680949744</p>
-        <p><strong>Email:</strong> <a
-            href="mailto:information.petguardian@gmail.com">information.petguardian@gmail.com</a></p>
-        <p><strong>Business Hours:</strong><br>
-          Saturday – Thursday: 9:00 AM – 6:00 PM<br>
-          Friday: Closed
-        </p>
-        <!-- <p><strong>TIN:</strong> 148600129439</p> -->
+  <main class="container">
+    <section class="page-section contact-page reveal">
+      <div class="contact-grid">
+        <div>
+          <h3>Get in Touch</h3>
+          <p><strong>Address:</strong> House - 11/13, Lane - 02, Road - 03, Block - B, North Halishahar, Chattogram</p>
+          <p><strong>Phone:</strong> (+880) 01680949744</p>
+          <p><strong>Email:</strong> <a href="mailto:information.petguardian@gmail.com">information.petguardian@gmail.com</a></p>
+          <p><strong>Hours:</strong> Sat–Thu 9:00 AM – 6:00 PM (Fri closed)</p>
+        </div>
+        <div>
+          <h3>Send a Message</h3>
+          <form class="contact-form" action="mailto:information.petguardian@gmail.com" method="post" enctype="text/plain">
+            <input class="input" name="Name" placeholder="Your Name" required>
+            <input class="input" name="Email" type="email" placeholder="Your Email" required>
+            <input class="input" name="Subject" placeholder="Subject" required>
+            <textarea class="input" name="Message" placeholder="Your Message" rows="5" required></textarea>
+            <button class="btn-send" type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
 
-      <div class="contact-form-area">
-        <h3>Send Us a Message</h3>
-        <form action="mailto:information.petguardian@gmail.com" method="post" enctype="text/plain" class="contact-form">
-          <input name="Name" placeholder="Your Name" required>
-          <input name="Email" type="email" placeholder="Your Email" required>
-          <input name="Subject" placeholder="Subject" required>
-          <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+      <div style="margin-top:18px;text-align:center">
+        <iframe src="https://www.google.com/maps?q=North%20Halishahar,%20Chattogram,%20Bangladesh&output=embed" width="100%" height="300" style="border:0;border-radius:12px"></iframe>
       </div>
-    </section>
-
-    <section class="map-section">
-      <h3>Find Us on the Map</h3>
-      <iframe src="https://www.google.com/maps?q=North%20Halishahar,%20Chattogram,%20Bangladesh&output=embed"
-        width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
-      </iframe>
     </section>
   </main>
 
-  <footer>
-    © <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.
-  </footer>
+  <footer>© <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.</footer>
 
   <script>
-    // Add shadow when page scrolls
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.top-nav');
-      if (window.scrollY > 10) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    // Highlight current nav link automatically
-    const currentPage = window.location.pathname.split('/').pop();
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-
-    // Mobile drawer toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-      });
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 700) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('open');
-          }
-        });
-      });
-    }
+    // nav & reveal script
+    window.addEventListener('scroll', ()=> document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8));
+    const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
+    hamburger?.addEventListener('click', ()=> {hamburger.classList.toggle('active');navLinks.classList.toggle('open');});
+    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{ if(window.innerWidth<=880){hamburger.classList.remove('active');navLinks.classList.remove('open');}}));
+    const revealEls = document.querySelectorAll('.reveal'); const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }); },{threshold:0.12}); revealEls.forEach(el=>obs.observe(el));
   </script>
-
 </body>
-
 </html>
