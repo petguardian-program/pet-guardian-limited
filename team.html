@@ -8,9 +8,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header -->
   <header class="top-nav">
     <div class="nav-container">
-      <div class="logo-area"><img src="images/logo.png" alt="logo"><h1>Pet Guardian Limited</h1></div>
+      <div class="logo-area">
+        <img src="images/logo.png" alt="Pet Guardian logo">
+        <h1>Pet Guardian Limited</h1>
+      </div>
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
@@ -23,20 +28,42 @@
     </div>
   </header>
 
-  <section class="hero" style="min-height:32vh;padding:48px 20px">
+  <!-- Hero Section -->
+  <section class="hero team-hero"style="
+    background-image: url('images/our-team-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
+    <div class="overlay"></div>
     <div class="inner container">
-      <h1>Meet the Team</h1>
-      <p>We are a small, passionate team building safer lives for pets.</p>
+      <h1>Meet the Pet Guardian Family</h1>
+      <p>We’re a dedicated group of innovators, animal lovers, and dreamers working to make pet safety smarter in Bangladesh.</p>
+      <a href="#our-team" class="btn btn-primary">Explore Our Teams</a>
     </div>
   </section>
 
-  <main class="container">
+  <!-- Main Content -->
+  <main id="our-team" class="container">
     <section class="page-section team-page reveal">
+      <h2 style="color:var(--accent-brown);text-align:center;margin-bottom:1rem;">Our Core Team</h2>
+      <p style="text-align:center;max-width:700px;margin:auto;margin-bottom:2rem;">
+        Behind every great product is a passionate team. At <strong>Pet Guardian</strong>, our strength lies in combining 
+        technology, empathy, and creativity to make every pet’s life safer and happier.
+      </p>
+
       <div class="team-grid">
-        <div class="team-member">
-          <img src="images/team-shuvo.png" alt="Arfatul Mowla Shuvo">
+        <div class="team-member reveal">
+          <div class="team-photo">
+            <img src="images/team-shuvo.png" alt="Arfatul Mowla Shuvo">
+          </div>
           <h3>Arfatul Mowla Shuvo</h3>
-          <p>Founder & CEO</p>
+          <p class="role">Founder & CEO</p>
+          <p class="bio">
+            Shuvo leads Pet Guardian with a vision to make technology more compassionate. 
+            With a background in product design and animal welfare, he ensures every innovation serves pets first.
+          </p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/mowlashuvo" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.facebook.com/mowlashuvo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
@@ -44,28 +71,55 @@
           </div>
         </div>
 
-        <div class="team-member">
-          <img src="images/team-rakib.png" alt="Rakibul Islam">
+        <div class="team-member reveal">
+          <div class="team-photo">
+            <img src="images/team-rakib.png" alt="Rakibul Islam">
+          </div>
           <h3>Rakibul Islam</h3>
-          <p>Business Advisor</p>
+          <p class="role">Business Advisor</p>
+          <p class="bio">
+            Rakibul brings strategic insight and operational excellence to Pet Guardian. 
+            His guidance helps align our mission with sustainable growth and meaningful partnerships.
+          </p>
           <div class="social-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/rakibul--islam" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/rakibulislam6.2.1997" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
+      </div>
+
+      <div class="center-cta" style="margin-top:3rem;">
+        <a href="contact.html" class="btn btn-primary">Join Our Mission</a>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>© <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.</footer>
 
+  <!-- Script -->
   <script>
-  // same nav + reveal script used on other pages
-  window.addEventListener('scroll', ()=> document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8));
+  window.addEventListener('scroll', ()=> 
+    document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8)
+  );
   const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
-  hamburger?.addEventListener('click', ()=> {hamburger.classList.toggle('active');navLinks.classList.toggle('open');});
-  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{ if(window.innerWidth<=880){hamburger.classList.remove('active');navLinks.classList.remove('open');}}));
-  const revealEls = document.querySelectorAll('.reveal'); const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }); },{threshold:0.12}); revealEls.forEach(el=>obs.observe(el));
+  hamburger?.addEventListener('click', ()=> {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{
+    if(window.innerWidth<=880){
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    }
+  }));
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) e.target.classList.add('show');
+    });
+  },{threshold:0.12});
+  revealEls.forEach(el=>obs.observe(el));
   </script>
 </body>
 </html>
