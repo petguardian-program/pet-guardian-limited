@@ -3,27 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pet Guardian Limited — Home</title>
+<title>Pet Guardian Limited — Smart Pet Safety & Tracking in Bangladesh</title>
 <link rel="icon" href="images/logo.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<meta name="description" content="Pet Guardian builds smart, caring technology to protect pets across Bangladesh — featuring real-time GPS tracking, safe zones, and battery-efficient performance.">
 </head>
 <body>
 
+<!-- Header -->
 <header class="top-nav">
   <div class="nav-container">
-    <div class="logo-area">
-      <img src="images/logo.png" alt="logo">
+     <a href="index.html" class="logo-area" style="text-decoration: none; color: inherit;">
+      <img src="images/logo.png" alt="Pet Guardian Logo">
       <h1>Pet Guardian Limited</h1>
-    </div>
+    </a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     <nav class="nav-links" id="navLinks">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="team.html">Our Team</a>
-      <a href="testimonials.html">Testimonials</a>
+      <!-- <a href="testimonials.html">Testimonials</a> -->
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -32,58 +34,100 @@
 <!-- Hero Slider -->
 <section class="hero-slider swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner.png')">
+
+    <div class="swiper-slide hero-slide" style="
+    background-image: url('images/hero-slide-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
       <div class="overlay"></div>
       <div class="inner">
         <h1>We protect, care for, and celebrate every pet.</h1>
-        <p>Pet Guardian builds simple, loving technology to keep pets safe across Bangladesh.</p>
+        <p>At Pet Guardian, we design technology that gives pet owners confidence, comfort, and real-time peace of mind.</p>
         <a class="btn btn-primary" href="services.html">Explore Services</a>
       </div>
     </div>
-    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner1.png')">
+
+    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
       <div class="overlay"></div>
       <div class="inner">
         <h1>Track your pet in real time with PawSentry</h1>
-        <p>Smart GPS, Geofencing, and battery-saving WiFi mode — all in one tracker.</p>
+        <p>Advanced GPS, smart alerts, and WiFi-based battery saver — built for smarter, safer pet tracking.</p>
         <a class="btn btn-outline" href="about.html">Learn More</a>
       </div>
     </div>
-    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner2.png')">
+
+    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
       <div class="overlay"></div>
       <div class="inner">
         <h1>Because every tail deserves safety & love</h1>
-        <p>Join thousands of happy pet owners who trust Pet Guardian.</p>
+        <p>Thousands of pet owners across Bangladesh trust Pet Guardian to keep their companions safe and connected.</p>
         <a class="btn btn-primary" href="team.html">Meet the Team</a>
       </div>
     </div>
-    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner3.png')">
-  <div class="overlay"></div>
-  <div class="inner">
-    <h1>Explore Our Pet Store</h1>
-    <p>Quality toys, nutritious food, and essential accessories for happy pets.</p>
-    <a class="btn btn-primary" href="services.html#pet-store">Shop Now</a>
-  </div>
-</div>
+
+    <div class="swiper-slide hero-slide" style="background-image:url('images/hero-slide-banner3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
+      <div class="overlay"></div>
+      <div class="inner">
+        <h1>Discover Our Pet Store</h1>
+        <p>From nutritious food to playful accessories — explore our range of quality pet supplies made with care.</p>
+        <a class="btn btn-primary" href="services.html#pet-store">Explore Shop</a>
+      </div>
+    </div>
 
   </div>
   <div class="swiper-pagination"></div>
 </section>
 
+<!-- Main Content -->
 <main class="container">
-  <!-- PawSentry Features -->
+
+  <!-- About PawSentry -->
   <section class="page-section reveal">
-    <h2>About PawSentry</h2>
-    <p>Our flagship tracker helps you track, safeguard and connect with your pet. Real-time location, geofencing, and low-power home mode.</p>
+    <h2>Meet PawSentry — Your Pet’s Smart Guardian</h2>
+    <p>PawSentry is our flagship pet tracker, created for those who believe pets deserve both freedom and safety. It helps you stay connected to your furry friend — anytime, anywhere.</p>
+
     <div class="grid grid-3">
-      <div class="feature reveal"><h3>Real-time Tracking</h3><p>Track live location on your phone.</p></div>
-      <div class="feature reveal"><h3>Geofencing</h3><p>Define safe zones and get alerts.</p></div>
-      <div class="feature reveal"><h3>Battery Smart</h3><p>WiFi power-saving at home.</p></div>
+      <div class="feature reveal">
+        <i class="fas fa-location-dot fa-2x" style="color:var(--accent-brown)"></i>
+        <h3>Real-time Tracking</h3>
+        <p>Locate your pet instantly through precise GPS updates directly on your mobile app.</p>
+      </div>
+      <div class="feature reveal">
+        <i class="fas fa-map-pin fa-2x" style="color:var(--accent-brown)"></i>
+        <h3>Smart Geofencing</h3>
+        <p>Set up custom safe zones and get notified if your pet ever steps outside the boundary.</p>
+      </div>
+      <div class="feature reveal">
+        <i class="fas fa-bolt fa-2x" style="color:var(--accent-brown)"></i>
+        <h3>WiFi Battery Saver</h3>
+        <p>Automatically switches to low-power mode when your pet is home — efficient and reliable.</p>
+      </div>
     </div>
   </section>
 
   <!-- Pet Store Preview -->
-  <section class="page-section reveal">
+  <section class="page-section reveal" id="pet-store">
     <h2>Pet Store</h2>
+    <p>Alongside smart tracking, Pet Guardian also offers a curated selection of pet supplies — because care extends beyond technology. From comfort to nutrition, we’ve got your pets covered.</p>
+    
     <div class="grid grid-3 pet-store-grid">
       <div class="feature pet-store-card reveal">
         <img src="images/hero-slide-banner3.png" alt="Toys & Accessories">
@@ -99,21 +143,31 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>© <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.</footer>
 
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-// Slider
-const swiper = new Swiper('.swiper', { loop:true, autoplay:{delay:5000}, pagination:{el:'.swiper-pagination',clickable:true}, effect:'fade', fadeEffect:{crossFade:true} });
-
-// Navbar + reveal
+const swiper = new Swiper('.swiper', { 
+  loop: true, 
+  autoplay: { delay: 5000 }, 
+  pagination: { el: '.swiper-pagination', clickable: true }, 
+  effect: 'fade', 
+  fadeEffect: { crossFade: true } 
+});
 window.addEventListener('scroll', ()=>document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8));
 const hamburger=document.getElementById('hamburger'), navLinks=document.getElementById('navLinks');
 hamburger?.addEventListener('click', ()=>{hamburger.classList.toggle('active'); navLinks.classList.toggle('open');});
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{if(window.innerWidth<=880){hamburger.classList.remove('active');navLinks.classList.remove('open');}}));
-const revealEls=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show');});},{threshold:0.12}); revealEls.forEach(el=>obs.observe(el));
+const revealEls=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show');});
+},{threshold:0.12});
+revealEls.forEach(el=>obs.observe(el));
 </script>
+
 </body>
 </html>

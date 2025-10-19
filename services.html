@@ -13,111 +13,142 @@
 
 <header class="top-nav">
   <div class="nav-container">
-    <div class="logo-area"><img src="images/logo.png" alt="logo"><h1>Pet Guardian Limited</h1></div>
+    <a href="index.html" class="logo-area" style="text-decoration: none; color: inherit;">
+      <img src="images/logo.png" alt="Pet Guardian Logo">
+      <h1>Pet Guardian Limited</h1>
+    </a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html" class="active">Services</a>
       <a href="team.html">Our Team</a>
-      <a href="testimonials.html">Testimonials</a>
+      <!-- <a href="testimonials.html">Testimonials</a> -->
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- Hero Section -->
-<section class="hero" style="min-height:32vh;padding:48px 20px">
-    <div class="inner container">
+<section class="hero service-hero"style="
+    background-image: url('images/hero-slide-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  ">
+  <div class="overlay"></div>
+  <div class="inner container">
     <h1>Our Services</h1>
-    <p>Solutions that help pets and their people live safer, happier lives.</p>
+    <p>Technology and care working together — for every pet’s safety, comfort, and happiness.</p>
+    <a href="#offerings" class="btn btn-primary">Explore Our Features</a>
   </div>
 </section>
 
-<main class="container">
+<main id="offerings" class="container">
 
-  <!-- Services Section -->
+  <!-- What We Offer -->
   <section class="page-section reveal">
-    <h2 style="color:var(--accent-brown)">What We Offer</h2>
+    <h2 style="color:var(--accent-brown)">Smart Pet Safety Features</h2>
+    <p class="section-intro">Our connected solutions help you keep your pets protected and loved — every moment, everywhere.</p>
 
-    <div class="grid grid-3" style="margin-top:14px">
+    <div class="grid grid-3">
       <div class="feature reveal">
-        <i class="fas fa-location-dot fa-2x" style="color:var(--accent-brown)"></i>
-        <h3>Real-time GPS</h3>
-        <p>Track your pet live with accurate location updates on your phone.</p>
+        <i class="fas fa-location-dot fa-2x"></i>
+        <h3>Real-Time GPS Tracking</h3>
+        <p>Always know where your pet is. View accurate, live tracking from your smartphone — built for peace of mind.</p>
       </div>
       <div class="feature reveal">
-        <i class="fas fa-map-pin fa-2x" style="color:var(--accent-brown)"></i>
-        <h3>Geofencing</h3>
-        <p>Create safe zones and receive alerts when your pet enters or leaves.</p>
+        <i class="fas fa-map-pin fa-2x"></i>
+        <h3>Smart Geofencing</h3>
+        <p>Set custom safe zones and receive instant alerts if your pet strays beyond familiar areas.</p>
       </div>
       <div class="feature reveal">
-        <i class="fas fa-bullhorn fa-2x" style="color:var(--accent-brown)"></i>
+        <i class="fas fa-bullhorn fa-2x"></i>
         <h3>Light & Sound Locator</h3>
-        <p>Find pets quickly in crowded areas or in low-light conditions.</p>
-      </div>
-    </div>
-
-    <div class="grid grid-3" style="margin-top:18px">
-      <div class="feature reveal">
-        <i class="fas fa-bolt fa-2x" style="color:var(--accent-brown)"></i>
-        <h3>Battery Saver</h3>
-        <p>Smart WiFi mode at home to extend battery life of your tracker.</p>
+        <p>Find your pet quickly at night or in crowded spaces using light and sound signals from the tracker.</p>
       </div>
       <div class="feature reveal">
-        <i class="fas fa-paw fa-2x" style="color:var(--accent-brown)"></i>
-        <h3>Safety Accessories</h3>
-        <p>Collars, reflective tags, leashes, and other protective gear.</p>
+        <i class="fas fa-bolt fa-2x"></i>
+        <h3>Battery-Saving Smart Mode</h3>
+        <p>Wi-Fi assisted tracking automatically optimizes battery life when your pet is at home.</p>
       </div>
       <div class="feature reveal">
-        <i class="fas fa-heart fa-2x" style="color:var(--accent-brown)"></i>
+        <i class="fas fa-heart-pulse fa-2x"></i>
         <h3>Emergency Support</h3>
-        <p>Guidance from veterinary partners and rescue teams for emergencies.</p>
+        <p>Access quick advice from veterinary partners and emergency contacts — because every second matters.</p>
+      </div>
+      <div class="feature reveal">
+        <i class="fas fa-paw fa-2x"></i>
+        <h3>Pet Safety Accessories</h3>
+        <p>Explore durable, comfortable collars, reflective leashes, and ID tags made for active pets.</p>
       </div>
     </div>
 
-    <!-- Optional CTA -->
-    <div style="text-align:center;margin-top:24px">
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <div class="center-cta">
+      <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
     </div>
-
   </section>
-<!-- Pet Store Preview -->
+
+  <!-- Pet Store Preview -->
   <section id="pet-store" class="page-section reveal">
     <h2>Pet Supplies & Accessories</h2>
-    <p>We offer quality pet supplies to keep your furry friends happy.</p>
+    <p class="section-intro">From tasty treats to cozy beds — we provide quality essentials to make every pet feel loved.</p>
     <div class="pet-store-preview">
       <div class="pet-store-item reveal">
-        <img src="images/Premium-Pet-Food.png" alt="Pet Food">
+        <img src="images/Premium-Pet-Food.png" alt="Premium Pet Food">
         <h3>Premium Pet Food</h3>
+        <p>Nutritious meals made with love and trusted by pet parents across Bangladesh.</p>
       </div>
       <div class="pet-store-item reveal">
-        <img src="images/hero-slide-banner3.png" alt="Pet Toys">
+        <img src="images/hero-slide-banner3.png" alt="Fun Pet Toys">
         <h3>Fun Pet Toys</h3>
+        <p>Interactive toys that keep tails wagging and minds stimulated.</p>
       </div>
       <div class="pet-store-item reveal">
-        <img src="images/pet-bed.png" alt="Pet Bed">
+        <img src="images/pet-bed.png" alt="Comfortable Pet Bed">
         <h3>Comfortable Pet Beds</h3>
+        <p>Soft, supportive beds where your furry friend can truly rest and recharge.</p>
       </div>
       <div class="pet-store-item reveal">
-        <img src="images/pet-leashes-accessory.png" alt="Pet Accessory">
+        <img src="images/pet-leashes-accessory.png" alt="Pet Leashes and Accessories">
         <h3>Leashes & Accessories</h3>
+        <p>Designed for safety, comfort, and style — perfect for every walk and adventure.</p>
       </div>
     </div>
-  </section>
 
+    <div class="center-cta">
+      <a href="about.html" class="btn btn-outline">Learn More About Our Mission</a>
+    </div>
+  </section>
 </main>
 
-<footer>© <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.</footer>
+<footer>
+  © <strong>Pet Guardian Limited</strong> — Where Every Tail Feels Safe.
+</footer>
 
 <script>
-window.addEventListener('scroll', ()=> document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8));
-const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
-hamburger?.addEventListener('click', ()=> {hamburger.classList.toggle('active'); navLinks.classList.toggle('open');});
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{ if(window.innerWidth<=880){hamburger.classList.remove('active'); navLinks.classList.remove('open');}}));
-
-const revealEls = document.querySelectorAll('.reveal'); 
-const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });},{threshold:0.12}); 
+window.addEventListener('scroll', ()=> 
+  document.querySelector('.top-nav').classList.toggle('scrolled', window.scrollY>8)
+);
+const hamburger = document.getElementById('hamburger'),
+      navLinks = document.getElementById('navLinks');
+hamburger?.addEventListener('click', ()=>{
+  hamburger.classList.toggle('active'); 
+  navLinks.classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click', ()=>{
+  if(window.innerWidth<=880){
+    hamburger.classList.remove('active'); 
+    navLinks.classList.remove('open');
+  }
+}));
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('show');
+  });
+},{threshold:0.12});
 revealEls.forEach(el=>obs.observe(el));
 </script>
 
