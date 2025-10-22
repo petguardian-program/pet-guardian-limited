@@ -691,60 +691,69 @@ footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:.95rem;b
   font-weight: 600;
 }
 
+/* Responsive adjustments for team page */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .team-photo img {
+    width: 110px;
+    height: 110px;
+  }
+}
 
-.team-hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-              url('images/team-banner.jpg') center/cover no-repeat;
-  color: #fff;
-  min-height: 45vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+@media (max-width: 768px) {
+  .team-hero {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .team-member {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+  .team-photo img {
+    width: 100px;
+    height: 100px;
+  }
+  .team-member h3 {
+    font-size: 1.1rem;
+  }
+  .team-member .bio {
+    font-size: 0.9rem;
+  }
 }
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.team-member {
-  background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.team-member:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.team-photo img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--accent-brown);
-  margin-bottom: 12px;
-}
-.team-member .role {
-  color: var(--accent-brown);
-  font-weight: 600;
-}
-.team-member .bio {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0.5rem 0 1rem;
-}
-.social-icons a {
-  color: var(--accent-brown);
-  margin: 0 8px;
-  font-size: 1.1rem;
-  transition: color 0.2s ease;
-}
-.social-icons a:hover {
-  color: var(--accent-orange);
+
+@media (max-width: 480px) {
+  .team-hero {
+    min-height: 35vh;
+    text-align: center;
+  }
+  .team-hero .inner h1 {
+    font-size: 1.6rem;
+  }
+  .team-hero .inner p {
+    font-size: 0.9rem;
+  }
+  .team-grid {
+    gap: 1.25rem;
+  }
+  .team-member {
+    padding: 1rem;
+  }
+  .team-photo img {
+    width: 90px;
+    height: 90px;
+  }
+  .social-icons a {
+    font-size: 1rem;
+    margin: 0 6px;
+  }
 }
 
 
@@ -777,44 +786,3 @@ footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:.95rem;b
   }
 }
 
-
-/* Pet Animation Section */
-.pet-animation {
-  position: relative;
-  width: 100%;
-  height: 180px; /* adjust as needed */
-  overflow: hidden;
-  background: transparent;
-  margin-top: 40px;
-  margin-bottom: -40px; /* so it overlaps naturally above main */
-}
-
-/* Cat animation (left to right) */
-.pet-animation .cat {
-  position: absolute;
-  bottom: 0;
-  left: -200px;
-  width: 150px;
-  animation: cat-walk 12s linear infinite;
-}
-
-@keyframes cat-walk {
-  0% { left: -200px; }
-  100% { left: 110%; }
-}
-
-/* Dog animation (right to left) */
-.pet-animation .dog {
-  position: absolute;
-  bottom: 0;
-  right: -200px;
-  width: 180px;
-  animation: dog-walk 14s linear infinite;
-  animation-delay: 5s; /* start after cat begins */
-  transform: scaleX(-1); /* flips dog to face left */
-}
-
-@keyframes dog-walk {
-  0% { right: -200px; }
-  100% { right: 110%; }
-}
